@@ -1,0 +1,15 @@
+{
+  "name": "gulp-setup",
+  "version": "0.0.1",
+  "description": "A simple gulp setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Philipp Müller",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.3.0"
+  }
+}
