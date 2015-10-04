@@ -13,7 +13,7 @@ var CSS_SRC     = BASE_PATH + 'src/**/*.scss';
 var CSS_DEST    = BASE_PATH + 'dest/';
 var CSS_OUTFILE = 'application.css';
 var JS_SOURCE   = [];
-var PROXY_URL   = 'gulp-basics.local';
+var PROXY_URL   = 'your-domain.local';
 var PORT        = 1337;
 
 /*@deps-----------------------------------------------------------------------*/
