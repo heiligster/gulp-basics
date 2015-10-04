@@ -12,6 +12,7 @@ var BASE_PATH   = __dirname + '/';
 var CSS_SRC     = BASE_PATH + 'src/**/*.scss';
 var CSS_DEST    = BASE_PATH + 'dest/';
 var CSS_OUTFILE = 'application.css';
+var PROXY_URL   = 'gulp-basics.local';
 
 /*@deps-----------------------------------------------------------------------*/
 var gulp    = require('gulp');
@@ -31,7 +32,7 @@ var sync = require('browser-sync').create();
 /**
  * Define tasks to run via gulp.watch
  */
-gulp.task('default', ['css', 'watch']);
+gulp.task('default', ['css', 'sync', 'watch']);
 
 
 /**
@@ -53,10 +54,12 @@ gulp.task('css', function () {
 
 /**
  * Sync file changes and reload browser accordingly
+ * See http://www.browsersync.io/docs/options/
+ * to get a list of all available options
  */
 gulp.task('sync', function () {
   var options = {
-    proxy: 'gulp-basics.local',
+    proxy: PROXY_URL,
     injectChanges: true,
     notify: false
   };
